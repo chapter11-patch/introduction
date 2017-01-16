@@ -1,7 +1,7 @@
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
 bookname: book-print
 # 書名
-booktitle: ことりちゃんとF\#入門(仮)
+booktitle: ことりちゃんとFSharp入門(仮)
 # 著者
 aut: pocketberserker
 prt: bleis, mzp
@@ -11,7 +11,7 @@ dsr: bleis, mzp
 date: 2017-4-9
 rights: |
   (C) 2017 >>=愛好会
-description: F#入門
+description: FSharp入門
 
 # coverfile: カバーページのbody要素内に挿入する内容を記述したファイル名
 # coverfile: _cover.html
