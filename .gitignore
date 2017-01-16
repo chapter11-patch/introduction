@@ -1,0 +1,6 @@
+*.html
+book-pdf/
+book-print-pdf/
+*.pdf
+.tex-mf-var/
+node_modules/
