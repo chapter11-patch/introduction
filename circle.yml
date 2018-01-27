@@ -1,14 +1,12 @@
-machine:
-  services:
-    - docker
-dependencies:
-  cache_directories:
-    - "~/docker"
-  override:
-    - docker info
-    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
-    - docker pull vvakame/review
-    - mkdir -p ~/docker; docker save vvakame/review > ~/docker/image.tar
-test:
-  override:
-    - docker run -v $(pwd):/work vvakame/review:latest /bin/sh -c "cd /work && npm install && rake clean lint pdf"
+version: 2
+jobs:
+  build:
+    docker:
+      - image: vvakame/review
+    steps:
+      - checkout
+      - run: npm i
+      - run: rake clean lint pdf
+      - store_artifacts:
+          path: book.pdf
+          destination: book.pdf
